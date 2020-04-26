@@ -40,7 +40,7 @@ public class Application {
         gameMap.at(1, 1).addItem(rocket);
 
         Item spaceSuit = new MartianItem("space suit", '[', true);
-        spaceSuit.addSkill(DemoSkills.SPACETRAVELLER);
+        spaceSuit.addCapability(DemoCapabilities.SPACETRAVELLER);
         gameMap.at(0, 1).addItem(spaceSuit);
 
         Item stick = new Stick();

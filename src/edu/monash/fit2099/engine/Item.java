@@ -8,13 +8,13 @@ import edu.monash.fit2099.interfaces.ItemInterface;
  * Abstract base class representing a physical object in the game world.
  *
  */
-public abstract class Item implements ItemInterface, Printable, Skilled {
+public abstract class Item implements ItemInterface, Printable, Capable {
 
 	protected boolean portable;
 	protected String name;
 	protected char displayChar;
 	protected Actions allowableActions;
-	protected Skills skills = new Skills();
+	protected Capabilities capabilities = new Capabilities();
 
 	/***
 	 * Constructor.
@@ -105,29 +105,29 @@ public abstract class Item implements ItemInterface, Printable, Skilled {
 	}
 
 	/**
-	 * Does this Item have the given Skill?
+	 * Does this Item have the given Capability?
 	 * 
-	 * @return true if and only if is Item has the given Skill
+	 * @return true if and only if is Item has the given Capability
 	 */
-	public boolean hasSkill(Enum<?> skill) {
-		return skills.hasSkill(skill);
+	public boolean hasCapability(Enum<?> capability) {
+		return capabilities.hasCapability(capability);
 	}
 
 	/**
-	 * Add a Skill to this Item.
+	 * Add a Capability to this Item.
 	 * 
-	 * @param skill the Skill to add
+	 * @param capability the Capability to add
 	 */
-	public void addSkill(Enum<?> skill) {
-		skills.addSkill(skill);
+	public void addCapability(Enum<?> capability) {
+		capabilities.addCapability(capability);
 	}
 
 	/**
-	 * Remove a Skill from this Item.
+	 * Remove a Capability from this Item.
 	 * 
-	 * @param skill the Skill to remove
+	 * @param capability the Capability to remove
 	 */
-	public void removeSkill(Enum<?> skill) {
-		skills.removeSkill(skill);
+	public void removeCapability(Enum<?> capability) {
+		capabilities.removeCapability(capability);
 	}
 }

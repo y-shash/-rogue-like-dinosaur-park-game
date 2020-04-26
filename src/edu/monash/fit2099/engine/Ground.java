@@ -5,9 +5,9 @@ import edu.monash.fit2099.interfaces.GroundInterface;
 /**
  * Class representing terrain type
  */
-public abstract class Ground implements GroundInterface, Skilled, Printable {
+public abstract class Ground implements GroundInterface, Capable, Printable {
 
-	private Skills skills = new Skills();
+	private Capabilities capabilities = new Capabilities();
 	protected char displayChar;
 
 	/**
@@ -61,30 +61,30 @@ public abstract class Ground implements GroundInterface, Skilled, Printable {
 	}
 
 	/**
-	 * Check whether this Ground type has the given skill.
+	 * Check whether this Ground type has the given Capability.
 	 * 
-	 * @param skill the Skill to check
-	 * @return true if and only if this Ground has the given skill.
+	 * @param capability the Capability to check
+	 * @return true if and only if this Ground has the given capability.
 	 */
-	public boolean hasSkill(Enum<?> skill) {
-		return skills.hasSkill(skill);
+	public boolean hasCapability(Enum<?> capability) {
+		return capabilities.hasCapability(capability);
 	}
 
 	/**
-	 * Add the given Skill to this Ground.
+	 * Add the given Capability to this Ground.
 	 * 
-	 * @param skill the Skill to add
+	 * @param capability the Capability to add
 	 */
-	public void addSkill(Enum<?> skill) {
-		skills.addSkill(skill);
+	public void addCapability(Enum<?> capability) {
+		capabilities.addCapability(capability);
 	}
 
 	/**
-	 * Remove the given Skill from this Ground.
+	 * Remove the given Capability from this Ground.
 	 * 
-	 * @param skill the Skill to remove.
+	 * @param capability the Capability to remove.
 	 */
-	public void removeSkill(Enum<?> skill) {
-		skills.removeSkill(skill);
+	public void removeCapability(Enum<?> capability) {
+		capabilities.removeCapability(capability);
 	}
 }

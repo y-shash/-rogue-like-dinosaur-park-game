@@ -6,6 +6,6 @@ public class Floor extends Ground {
 
 	public Floor() {
 		super('.');
-		addSkill(Status.DEAD);
+		addCapability(Status.DEAD);
 	}
 }

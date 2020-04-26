@@ -6,9 +6,9 @@ import java.util.List;
 
 import edu.monash.fit2099.interfaces.ActorInterface;
 
-public abstract class Actor implements ActorInterface, Skilled, Printable {
+public abstract class Actor implements ActorInterface, Capable, Printable {
 
-	private Skills skills = new Skills();
+	private Capabilities capabilities = new Capabilities();
 	protected String name;
 	protected char displayChar;
 	protected List<Item> inventory = new ArrayList<Item>();
@@ -156,35 +156,35 @@ public abstract class Actor implements ActorInterface, Skilled, Printable {
 	}
 
 	/**
-	 * Returns true if and only if the current Actor has the required skill.
+	 * Returns true if and only if the current Actor has the required capability.
 	 *
-	 * @param skill the skill required
-	 * @return true if and only if the current Actor has the required skill
+	 * @param capability the capability required
+	 * @return true if and only if the current Actor has the required capability
 	 */
-	public boolean hasSkill(Enum<?> skill) {
+	public boolean hasCapability(Enum<?> capability) {
 
 		for (Item item : inventory) {
-			if (item.hasSkill(skill)) {
+			if (item.hasCapability(capability)) {
 				return true;
 			}
 		}
-		return skills.hasSkill(skill);
+		return capabilities.hasCapability(capability);
 	}
 
 	/**
-	 * Add a skill to this Actor.
+	 * Add a capability to this Actor.
 	 * 
-	 * @param skill the Skill to add
+	 * @param capability the Capability to add
 	 */
-	public void addSkill(Enum<?> skill) {
-		skills.addSkill(skill);
+	public void addCapability(Enum<?> capability) {
+		capabilities.addCapability(capability);
 	}
 
-	/** Remove a skill from this Actor.
+	/** Remove a capability from this Actor.
 	 * 
-	 * @param skill the Skill to remove
+	 * @param capability the Capability to remove
 	 */
-	public void removeSkill(Enum<?> skill) {
-		skills.removeSkill(skill);
+	public void removeCapability(Enum<?> capability) {
+		capabilities.removeCapability(capability);
 	}
 }

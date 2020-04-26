@@ -5,8 +5,8 @@ package edu.monash.fit2099.engine;
  * A practical alternative to type introspection and other problems.
  *
  */
-public interface Skilled {
-	boolean hasSkill(Enum<?> skill);
-	void addSkill(Enum<?> skill);
-	void removeSkill(Enum<?> skill);
+public interface Capable {
+	boolean hasCapability(Enum<?> capability);
+	void addCapability(Enum<?> capability);
+	void removeCapability(Enum<?> capability);
 }

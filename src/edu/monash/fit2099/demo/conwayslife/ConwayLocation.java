@@ -16,7 +16,7 @@ public class ConwayLocation extends Location {
 		read = !read;
 		if (read) {
 			int aliveNeighbours = aliveNeighboursCount();
-			boolean aliveHere = getGround().hasSkill(Status.ALIVE);
+			boolean aliveHere = getGround().hasCapability(Status.ALIVE);
 
 			// birth
 			if (!aliveHere && aliveNeighbours == 3)
@@ -46,7 +46,7 @@ public class ConwayLocation extends Location {
 	
 	private int aliveNeighboursCount() {
 		return (int) getExits().stream().map(exit -> exit.getDestination().getGround())
-				.filter(ground -> ground.hasSkill(Status.ALIVE)).count();
+				.filter(ground -> ground.hasCapability(Status.ALIVE)).count();
 	}
 	
 	private enum NextTurn {

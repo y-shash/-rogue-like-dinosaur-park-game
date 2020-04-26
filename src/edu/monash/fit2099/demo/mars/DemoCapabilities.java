@@ -1,5 +1,5 @@
 package edu.monash.fit2099.demo.mars;
 
-public enum DemoSkills {
+public enum DemoCapabilities {
 	SPACETRAVELLER;
 }

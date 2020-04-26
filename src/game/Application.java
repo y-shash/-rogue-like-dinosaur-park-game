@@ -10,7 +10,7 @@ import edu.monash.fit2099.engine.GameMap;
 import edu.monash.fit2099.engine.World;
 
 /**
- * The main class for the dinosaur park game.
+ * The main class for the zombie apocalypse game.
  *
  */
 public class Application {
