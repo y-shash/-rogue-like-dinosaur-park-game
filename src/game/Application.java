@@ -10,7 +10,7 @@ import edu.monash.fit2099.engine.GameMap;
 import edu.monash.fit2099.engine.World;
 
 /**
- * The main class for the zombie apocalypse game.
+ * The main class for the Jurassic World game.
  *
  */
 public class Application {
@@ -52,9 +52,9 @@ public class Application {
 		Actor player = new Player("Player", '@', 100);
 		world.addPlayer(player, gameMap.at(9, 4));
 		
-		// Place a pair of protoceratops in the middle of the map
-		gameMap.at(30, 12).addActor(new Protoceratops("Protoceratops"));
-		gameMap.at(32, 12).addActor(new Protoceratops("Protoceratops"));
+		// Place a pair of stegosaurs in the middle of the map
+		gameMap.at(30, 12).addActor(new Stegosaur("Stegosaur"));
+		gameMap.at(32, 12).addActor(new Stegosaur("Stegosaur"));
 		
 			
 		world.run();
