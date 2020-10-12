@@ -10,7 +10,7 @@ import edu.monash.fit2099.engine.Menu;
 /**
  * Class representing the Player.
  */
-public class Player extends Actor {
+public class  Player extends Actor {
 
 	private Menu menu = new Menu();
 
