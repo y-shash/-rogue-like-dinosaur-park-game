@@ -11,7 +11,7 @@ import edu.monash.fit2099.engine.World;
 
 /**
  * The main class for the Jurassic World game.
- * this is in asr0015 branch
+ *
  */
 public class Application {
 
@@ -19,7 +19,7 @@ public class Application {
 		World world = new World(new Display());
 
 		FancyGroundFactory groundFactory = new FancyGroundFactory(new Dirt(), new Wall(), new Floor(), new Tree());
-		
+
 		List<String> map = Arrays.asList(
 		"................................................................................",
 		"................................................................................",
