@@ -24,8 +24,10 @@ public class HungryDinos {
         }
 
         public void is_dead(){
-
+            //fd
         }
+
+
 
 
 
