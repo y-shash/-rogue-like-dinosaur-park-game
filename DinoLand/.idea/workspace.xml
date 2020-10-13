@@ -26,8 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dca508c-9a0b-4abc-a56f-8552feb87e1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/game/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,10 +113,11 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="422" y="96" key="FileChooserDialogImpl" timestamp="1602511863578">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="633" y="147" key="FileChooserDialogImpl" timestamp="1602587671788">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="422" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1602511863578" />
+    <state x="633" y="147" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602587671788" />
     <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1600859041258">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
