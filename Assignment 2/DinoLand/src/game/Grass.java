@@ -9,14 +9,12 @@ import java.util.Random;
  * A class for grass and its growth Behaviour
  */
 
-public class Grass extends Ground {
+public class Grass extends Item{
 
     public static Random r = new Random();
-    private int time = 0;
-
 
     public Grass() {
-        super('G');
+        super("grass", 'G', true);
     }
 
     // here is where the growing probability is derived, if growingProbability(2) it shows that there is a random probability of 2% to achieve a growth
@@ -29,10 +27,4 @@ public class Grass extends Ground {
         return false;
     }
 
-    @Override
-    public void tick(Location location) {
-        super.tick(location);
-        time++;
-
-    }
 }

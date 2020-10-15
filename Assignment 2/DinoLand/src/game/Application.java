@@ -55,23 +55,26 @@ public class Application {
 		gameMap.at(30, 12).addActor(new Stegosaur("Stegosaur"));
 		gameMap.at(32, 12).addActor(new Stegosaur("Stegosaur"));
 		
-		// place some grass with respect to probab
-		boolean grassInX;
-		boolean grassInY;
+		// place some grass with respect to probability
+		boolean twoGrassInX;
+		boolean twoGrassInY;
+
+		int probabilityGrassSpawn = 2;
+		int probabilityAdjacentGrass = 10;
 
 		for (int y = 0; y <= 24; y++) {
 			for (int x = 0; x <= 79; x ++){
 
-				grassInX = x >= 2 && gameMap.at(x - 1, y).getDisplayChar() == 'G' && gameMap.at(x - 2, y).getDisplayChar() == 'G';
-				grassInY = y >= 2 && gameMap.at(x, y - 1).getDisplayChar() == 'G' && gameMap.at(x, y - 2).getDisplayChar() == 'G';
+				twoGrassInX = x >= 2 && gameMap.at(x - 1, y).getDisplayChar() == 'G' && gameMap.at(x - 2, y).getDisplayChar() == 'G';
+				twoGrassInY = y >= 2 && gameMap.at(x, y - 1).getDisplayChar() == 'G' && gameMap.at(x, y - 2).getDisplayChar() == 'G';
 
-				if (gameMap.at(x, y).getDisplayChar() == '.' && (grassInX || grassInY)){
-					if (Grass.growingProbability(10)){
-						gameMap.at(x,y).setGround(new Grass());
+				if (gameMap.at(x, y).getDisplayChar() == '.' && (twoGrassInX || twoGrassInY)){
+					if (Grass.growingProbability(probabilityAdjacentGrass)){
+						gameMap.at(x,y).addItem(new Grass());
 					}
 				}
-				else if (gameMap.at(x, y).getDisplayChar() == '.' && Grass.growingProbability(2)){
-					gameMap.at(x,y).setGround(new Grass());
+				else if (gameMap.at(x, y).getDisplayChar() == '.' && Grass.growingProbability(probabilityGrassSpawn)){
+					gameMap.at(x,y).addItem(new Grass());
 				}
 
 			}
