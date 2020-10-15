@@ -1,13 +1,11 @@
 package game;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-import edu.monash.fit2099.engine.Actor;
-import edu.monash.fit2099.engine.Display;
-import edu.monash.fit2099.engine.FancyGroundFactory;
-import edu.monash.fit2099.engine.GameMap;
-import edu.monash.fit2099.engine.World;
+import edu.monash.fit2099.engine.*;
 
 /**
  * The main class for the Jurassic World game.
@@ -22,10 +20,10 @@ public class Application {
 
 		List<String> map = Arrays.asList(
 		"................................................................................",
-		"........................................../../.../..............................",
-		".....#######.............................../../././.............................",
-		".....#_____#.............................../../../..............................",
-		".....#_____#................................./..................................",
+		"................................................................................",
+		".....#######....................................................................",
+		".....#_____#....................................................................",
+		".....#_____#....................................................................",
 		".....###.###....................................................................",
 		"................................................................................",
 		"......................................+++.......................................",
@@ -57,7 +55,27 @@ public class Application {
 		gameMap.at(30, 12).addActor(new Stegosaur("Stegosaur"));
 		gameMap.at(32, 12).addActor(new Stegosaur("Stegosaur"));
 		
-			
+		// place some grass with respect to probab
+		boolean grassInX;
+		boolean grassInY;
+
+		for (int y = 0; y <= 24; y++) {
+			for (int x = 0; x <= 79; x ++){
+
+				grassInX = x >= 2 && gameMap.at(x - 1, y).getDisplayChar() == 'G' && gameMap.at(x - 2, y).getDisplayChar() == 'G';
+				grassInY = y >= 2 && gameMap.at(x, y - 1).getDisplayChar() == 'G' && gameMap.at(x, y - 2).getDisplayChar() == 'G';
+
+				if (gameMap.at(x, y).getDisplayChar() == '.' && (grassInX || grassInY)){
+					if (Grass.growingProbability(10)){
+						gameMap.at(x,y).setGround(new Grass());
+					}
+				}
+				else if (gameMap.at(x, y).getDisplayChar() == '.' && Grass.growingProbability(2)){
+					gameMap.at(x,y).setGround(new Grass());
+				}
+
+			}
+		}
 		world.run();
 	}
 }

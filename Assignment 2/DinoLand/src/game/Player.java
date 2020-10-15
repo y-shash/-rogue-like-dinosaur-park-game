@@ -13,6 +13,7 @@ import edu.monash.fit2099.engine.Menu;
 public class  Player extends Actor {
 
 	private Menu menu = new Menu();
+	private Behaviour behaviour;
 
 	/**
 	 * Constructor.
@@ -23,11 +24,13 @@ public class  Player extends Actor {
 	 */
 	public Player(String name, char displayChar, int hitPoints) {
 		super(name, displayChar, hitPoints);
+
 	}
 
 	@Override
 	public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
 		// Handle multi-turn Actions
+
 		if (lastAction.getNextAction() != null)
 			return lastAction.getNextAction();
 		return menu.showMenu(this, actions, display);

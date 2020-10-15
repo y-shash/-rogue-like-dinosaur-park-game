@@ -12,7 +12,7 @@ public class Food extends PortableItem {
      * @param incFoodLvl amount of increase if this food is eaten
      */
     public Food(int incFoodLvl) {
-        super("food", '/');
+        super("food", 'F');
         IncFoodLvl = incFoodLvl;
     }
 
