@@ -5,7 +5,7 @@ import edu.monash.fit2099.engine.Actor;
 import edu.monash.fit2099.engine.GameMap;
 
 /**
- * Special action for eating food
+ * class represents the action for eating food
  *
  * @author User
  *
@@ -14,7 +14,7 @@ public class EatFoodAction extends Action {
     private Food foodToRemove;
 
     /**
-     * Constructor
+     * A constructor to instantiate an object of the Food class
      *
      * @param initFood the food that will be eaten
      */
@@ -24,7 +24,7 @@ public class EatFoodAction extends Action {
     }
 
     /**
-     * Perform the eating action and increase the food level
+     * Perform the eating action, increase the food level, remove the food after being eaten and add it to thr actor
      *
      * @param actor The actor that is eating.
      * @param map The map the actor is on.
@@ -33,10 +33,16 @@ public class EatFoodAction extends Action {
     @Override
     public String execute(Actor actor, GameMap map) {
         // TODO Auto-generated method stub
-        actor.heal(foodToRemove.getIncFoodLvl());
-        actor.removeItemFromInventory(foodToRemove);
+        map.locationOf(actor).removeItem(foodToRemove);
+        actor.incFoodLvl(foodToRemove.getIncFoodLvl());
         return menuDescription(actor);
     }
+
+    /**
+     * A description method to indicate that the actor has eaten and level up the food level
+     * @param actor The actor performing the action.
+     * @return
+     */
 
     @Override
     public String menuDescription(Actor actor) {

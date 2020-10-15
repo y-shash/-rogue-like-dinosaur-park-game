@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import edu.monash.fit2099.interfaces.ActorInterface;
+import game.Food;
 
 public abstract class Actor implements ActorInterface, Capable, Printable {
 
@@ -14,6 +15,7 @@ public abstract class Actor implements ActorInterface, Capable, Printable {
 	protected List<Item> inventory = new ArrayList<Item>();
 	protected int maxHitPoints;
 	protected int hitPoints;
+	private Food food;
 
 	/**
 	 * Constructor.
@@ -97,6 +99,15 @@ public abstract class Actor implements ActorInterface, Capable, Printable {
 	 */
 	public boolean isConscious() {
 		return hitPoints > 0;
+	}
+
+	/**
+	 * a method returns true if the setgosaur is dead
+	 * @return true if hitpoints is less than or equal to -20
+	 */
+
+	public boolean isDead(){
+		return hitPoints <= -20;
 	}
 
 	/**
@@ -186,5 +197,9 @@ public abstract class Actor implements ActorInterface, Capable, Printable {
 	 */
 	public void removeCapability(Enum<?> capability) {
 		capabilities.removeCapability(capability);
+	}
+
+	public void incFoodLvl(int foodLvl){
+		food.incFoodLlvl(foodLvl);
 	}
 }

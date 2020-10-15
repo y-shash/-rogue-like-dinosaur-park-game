@@ -19,10 +19,19 @@ public class EatFoodBehaviour implements Behaviour {
         // TODO Auto-generated constructor stub
     }
 
+    /**
+     * get the list of action the actor can do when need to feed stegosaurs
+     * @param actor the Actor acting
+     * @param map the GameMap containing the Actor
+     * @return
+     */
+
     @Override
     public Action getAction(Actor actor, GameMap map) {
-        // TODO Auto-generated method stub
-        if (actor.isConscious()) {
+        if (actor.isDead()){
+            return null;
+        }
+        else if (actor.isConscious()) {
             Food food = this.getFood(actor.getInventory());
             if (food != null) {
                 return new EatFoodAction(food);
