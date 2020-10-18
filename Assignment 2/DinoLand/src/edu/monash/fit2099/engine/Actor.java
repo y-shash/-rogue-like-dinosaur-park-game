@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.List;
 
 import edu.monash.fit2099.interfaces.ActorInterface;
-import game.Food;
 
 public abstract class Actor implements ActorInterface, Capable, Printable {
 
@@ -15,7 +14,6 @@ public abstract class Actor implements ActorInterface, Capable, Printable {
 	protected List<Item> inventory = new ArrayList<Item>();
 	protected int maxHitPoints;
 	protected int hitPoints;
-	private Food food;
 
 	/**
 	 * Constructor.
@@ -91,7 +89,7 @@ public abstract class Actor implements ActorInterface, Capable, Printable {
 	 * Is this Actor conscious?
 	 * Returns true if the current Actor has positive hit points.
 	 * Actors on zero hit points are deemed to be unconscious.
-	 * 
+	 *
 	 * Depending on the game client, this status may be interpreted as either 
 	 * unconsciousness or death, or inflict some other kind of status.
 	 *
@@ -99,15 +97,6 @@ public abstract class Actor implements ActorInterface, Capable, Printable {
 	 */
 	public boolean isConscious() {
 		return hitPoints > 0;
-	}
-
-	/**
-	 * a method returns true if the setgosaur is dead
-	 * @return true if hitpoints is less than or equal to -20
-	 */
-
-	public boolean isDead(){
-		return hitPoints <= -20;
 	}
 
 	/**
@@ -139,7 +128,7 @@ public abstract class Actor implements ActorInterface, Capable, Printable {
 
 	/**
 	 * Get the weapon this Actor is using.
-	 * 
+	 *
 	 * If the current Actor is carrying weapons, returns the first one in the
 	 * inventory. Otherwise, returns the Actor's natural fighting equipment e.g.
 	 * fists.
@@ -184,7 +173,7 @@ public abstract class Actor implements ActorInterface, Capable, Printable {
 
 	/**
 	 * Add a capability to this Actor.
-	 * 
+	 *
 	 * @param capability the Capability to add
 	 */
 	public void addCapability(Enum<?> capability) {
@@ -192,14 +181,10 @@ public abstract class Actor implements ActorInterface, Capable, Printable {
 	}
 
 	/** Remove a capability from this Actor.
-	 * 
+	 *
 	 * @param capability the Capability to remove
 	 */
 	public void removeCapability(Enum<?> capability) {
 		capabilities.removeCapability(capability);
-	}
-
-	public void incFoodLvl(int foodLvl){
-		food.incFoodLlvl(foodLvl);
 	}
 }

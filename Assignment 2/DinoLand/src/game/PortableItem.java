@@ -9,5 +9,6 @@ public class PortableItem extends Item {
 
 	public PortableItem(String name, char displayChar) {
 		super(name, displayChar, true);
+
 	}
 }

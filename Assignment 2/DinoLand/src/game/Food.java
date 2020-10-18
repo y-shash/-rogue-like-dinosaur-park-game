@@ -1,18 +1,21 @@
 package game;
 
+import edu.monash.fit2099.engine.Item;
+
 /**
  * A class that represents food.
  */
-public class Food extends PortableItem {
+public class Food extends PortableItem{
     private int IncFoodLvl;
+
 
     /**
      * Constructor
      *
      * @param incFoodLvl amount of increase if this food is eaten
      */
-    public Food(int incFoodLvl) {
-        super("food", 'F');
+    public Food(String name, char DisplayChar, int incFoodLvl) {
+        super(name, DisplayChar);
         IncFoodLvl = incFoodLvl;
     }
 

@@ -15,6 +15,7 @@ public class Grass extends Item{
 
     public Grass() {
         super("grass", 'G', true);
+
     }
 
     // here is where the growing probability is derived, if growingProbability(2) it shows that there is a random probability of 2% to achieve a growth
@@ -26,5 +27,6 @@ public class Grass extends Item{
         }
         return false;
     }
+
 
 }
