@@ -28,7 +28,10 @@ public class  Player extends Actor {
 		if (lastAction.getNextAction() != null)
 			return lastAction.getNextAction();
 
+		actions.add(new EatFoodAction(new Grass()));
 		actions.add(new Quit());
+
+
 		return menu.showMenu(this, actions, display);
 	}
 }

@@ -9,12 +9,12 @@ import java.util.Random;
  * A class for grass and its growth Behaviour
  */
 
-public class Grass extends Item{
+public class Grass extends Food{
 
     public static Random r = new Random();
 
     public Grass() {
-        super("grass", 'G', true);
+        super("grass", 'G', 1);
 
     }
 

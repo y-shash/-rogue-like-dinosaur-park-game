@@ -3,6 +3,7 @@ package game;
 import edu.monash.fit2099.engine.Action;
 import edu.monash.fit2099.engine.Actor;
 import edu.monash.fit2099.engine.GameMap;
+import edu.monash.fit2099.engine.Item;
 
 /**
  * class represents the action for eating food
@@ -23,6 +24,14 @@ public class EatFoodAction extends Action {
         foodToRemove = initFood;
     }
 
+    public EatFoodAction() {
+
+    }
+
+    public void incFoodlvl(Actor actor, Item food){
+
+    }
+
     /**
      * Perform the eating action, increase the food level, remove the food after being eaten and add it to thr actor
      *
@@ -34,7 +43,7 @@ public class EatFoodAction extends Action {
     public String execute(Actor actor, GameMap map) {
         // TODO Auto-generated method stub
         map.locationOf(actor).removeItem(foodToRemove);
-        actor.incFoodLvl(foodToRemove.getIncFoodLvl());
+//        actor.incFoodLvl(foodToRemove.getIncFoodLvl());
         return menuDescription(actor);
     }
 
@@ -49,6 +58,12 @@ public class EatFoodAction extends Action {
         // TODO Auto-generated method stub
         return actor + " eats food to level up food level.";
     }
+
+    @Override
+    public String hotkey() {
+        return "T";
+    }
+
     //km
 
 }

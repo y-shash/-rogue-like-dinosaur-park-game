@@ -8,7 +8,6 @@ import edu.monash.fit2099.engine.Item;
 public class Food extends PortableItem{
     private int IncFoodLvl;
 
-
     /**
      * Constructor
      *

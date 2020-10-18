@@ -28,7 +28,7 @@ public class EatFoodBehaviour implements Behaviour {
 
     @Override
     public Action getAction(Actor actor, GameMap map) {
-        if (actor.isDead()){
+        if (!actor.isConscious()){
             return null;
         }
         else if (actor.isConscious()) {

@@ -5,7 +5,7 @@ import edu.monash.fit2099.engine.*;
 public class Allosaur extends Actor {
 
 
-    private Behaviour[] = new carnivorousBehaviour(Stegosaur.class, 10);
+//    private Behaviour[] ={new carnivorousBehaviour(Stegosaur.class, 10)};
     public Allosaur(){
         super("dinosaur",'A', 100);
 
