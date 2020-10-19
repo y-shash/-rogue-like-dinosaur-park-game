@@ -28,9 +28,9 @@ public class EatFoodAction extends Action {
 
     }
 
-    public void incFoodlvl(Actor actor, Item food){
+   // public void incFoodlvl(Actor actor, Item food){
 
-    }
+    //}
 
     /**
      * Perform the eating action, increase the food level, remove the food after being eaten and add it to thr actor
@@ -41,9 +41,8 @@ public class EatFoodAction extends Action {
      */
     @Override
     public String execute(Actor actor, GameMap map) {
-        // TODO Auto-generated method stub
         map.locationOf(actor).removeItem(foodToRemove);
-//        actor.incFoodLvl(foodToRemove.getIncFoodLvl());
+        actor.heal(foodToRemove.getIncFoodLvl());
         return menuDescription(actor);
     }
 

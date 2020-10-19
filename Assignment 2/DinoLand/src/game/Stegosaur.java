@@ -1,12 +1,7 @@
 package game;
 
 
-import edu.monash.fit2099.engine.Action;
-import edu.monash.fit2099.engine.Actions;
-import edu.monash.fit2099.engine.Actor;
-import edu.monash.fit2099.engine.Display;
-import edu.monash.fit2099.engine.DoNothingAction;
-import edu.monash.fit2099.engine.GameMap;
+import edu.monash.fit2099.engine.*;
 
 /**
  * A herbivorous dinosaur.
@@ -14,7 +9,10 @@ import edu.monash.fit2099.engine.GameMap;
  */
 public class Stegosaur extends Actor {
 	// Will need to change this to a collection if Stegosaur gets additional Behaviours.
-	private Behaviour behaviour;
+	public Behaviour behaviour;
+	public char Gender;   //represented by F or M
+	public int FoodLvl;
+
 
 	/** 
 	 * Constructor.
@@ -22,10 +20,13 @@ public class Stegosaur extends Actor {
 	 * 
 	 * @param name the name of this Stegosaur
 	 */
-	public Stegosaur(String name) {
+	public Stegosaur(String name,char gender) {
 		super(name, 'd', 100);
-		
+		this.Gender = gender;
+		this.FoodLvl = hitPoints;
 		behaviour = new WanderBehaviour();
+
+
 	}
 
 	@Override
@@ -49,5 +50,12 @@ public class Stegosaur extends Actor {
 		
 		return new DoNothingAction();
 	}
+
+	public char getGender(){return Gender;}
+
+	public void mateAction(){
+	}
+
+
 
 }

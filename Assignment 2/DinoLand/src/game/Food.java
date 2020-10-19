@@ -18,9 +18,9 @@ public class Food extends PortableItem{
         IncFoodLvl = incFoodLvl;
     }
 
-    public void incFoodLlvl(int initFOODLvl){
-        IncFoodLvl += initFOODLvl;
-    }
+    //public void incFoodLlvl(int initFOODLvl){
+    //    IncFoodLvl += initFOODLvl;
+    //}
 
     public int getIncFoodLvl() {
         return IncFoodLvl;
