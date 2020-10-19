@@ -28,10 +28,6 @@ public class EatFoodAction extends Action {
 
     }
 
-   // public void incFoodlvl(Actor actor, Item food){
-
-    //}
-
     /**
      * Perform the eating action, increase the food level, remove the food after being eaten and add it to thr actor
      *
@@ -55,7 +51,8 @@ public class EatFoodAction extends Action {
     @Override
     public String menuDescription(Actor actor) {
         // TODO Auto-generated method stub
-        return actor + " eats food to level up food level.";
+
+        return actor + " eats food to heal.";
     }
 
     @Override

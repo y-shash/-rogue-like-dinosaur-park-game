@@ -16,6 +16,7 @@ public class Food extends PortableItem{
     public Food(String name, char DisplayChar, int incFoodLvl) {
         super(name, DisplayChar);
         IncFoodLvl = incFoodLvl;
+        super.allowableActions.add(new EatFoodAction());
     }
 
     //public void incFoodLlvl(int initFOODLvl){
@@ -26,4 +27,3 @@ public class Food extends PortableItem{
         return IncFoodLvl;
     }
 }
-//

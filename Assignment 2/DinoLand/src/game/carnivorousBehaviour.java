@@ -11,8 +11,7 @@ public class carnivorousBehaviour implements Behaviour {
 
     public carnivorousBehaviour( Class<?> target, int range){
 
-        this.targetClass = target;
-        this.x           = range;
+
 
 
     }

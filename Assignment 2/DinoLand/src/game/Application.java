@@ -52,8 +52,11 @@ public class Application {
 		world.addPlayer(player, gameMap.at(9, 4));
 		
 		// Place a pair of stegosaurs in the middle of the map
-		gameMap.at(30, 12).addActor(new Stegosaur("Stegosaur"));
-		gameMap.at(32, 12).addActor(new Stegosaur("Stegosaur"));
+		Stegosaur richyStego = new Stegosaur("richy", Gender.MALE);
+		Stegosaur wendyStego = new Stegosaur("wendy", Gender.FEMALE);
+		gameMap.at(30, 12).addActor(richyStego);
+		gameMap.at(32, 12).addActor(wendyStego);
+
 		
 		// place some grass with respect to probability as well as control whether a tree drops a fruit each turn
 		boolean twoGrassInX;
@@ -62,10 +65,9 @@ public class Application {
 
 		int probabilityGrassSpawn = 2;
 		int probabilityAdjacentGrass = 10;
-		int probabilityFruitDrop = 55;
+		int probabilityFruitDrop = 5;
 		for (int y = 0; y <= 24; y++) {
 			for (int x = 0; x <= 79; x ++){
-
 				twoGrassInX = x >= 2 && gameMap.at(x - 1, y).getDisplayChar() == 'G' && gameMap.at(x - 2, y).getDisplayChar() == 'G';
 				twoGrassInY = y >= 2 && gameMap.at(x, y - 1).getDisplayChar() == 'G' && gameMap.at(x, y - 2).getDisplayChar() == 'G';
 
@@ -76,6 +78,13 @@ public class Application {
 				}
 				else if (gameMap.at(x, y).getDisplayChar() == '.' && Grass.growingProbability(probabilityGrassSpawn)){
 					gameMap.at(x,y).addItem(new Grass());
+				}
+
+				if(gameMap.at(x,y).getDisplayChar()=='+'|| gameMap.at(x,y).getDisplayChar()=='t' || gameMap.at(x,y).getDisplayChar()=='T'){
+					if(Tree.dropFruitChance(probabilityFruitDrop)){
+						gameMap.at(x,y).addItem(new Fruits());
+
+					}
 				}
 
 

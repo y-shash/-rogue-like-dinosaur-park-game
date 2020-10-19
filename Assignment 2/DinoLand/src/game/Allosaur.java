@@ -2,16 +2,19 @@ package game;
 
 import edu.monash.fit2099.engine.*;
 
-public class Allosaur extends Actor {
+public class Allosaur extends Dinosaur {
 
 
-//    private Behaviour[] ={new carnivorousBehaviour(Stegosaur.class, 10)};
-    public Allosaur(){
-        super("dinosaur",'A', 100);
 
+
+    public Allosaur(String name, Gender gender) {
+        super(name, 'A', 100, 100, Species.CARNIVORE, gender);
     }
+
     @Override
     public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
         return null;
     }
 }
+
+

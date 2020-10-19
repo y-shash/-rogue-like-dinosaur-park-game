@@ -43,8 +43,10 @@ public class AttackAction extends Action {
 
 		int damage = weapon.damage();
 		String result = actor + " " + weapon.verb() + " " + target + " for " + damage + " damage.";
+		System.out.println(target.getHitPoints()+"HP before");
 
 		target.hurt(damage);
+		System.out.println(target.getHitPoints()+"HP Now");
 		if (!target.isConscious()) {
 			Item corpse = new PortableItem("dead " + target, '%');
 			map.locationOf(target).addItem(corpse);
