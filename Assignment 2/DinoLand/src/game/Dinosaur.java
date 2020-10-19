@@ -8,6 +8,7 @@ public abstract class Dinosaur extends Actor {
     protected String dinoName;
     protected Species type;
     protected Gender gender;
+    protected boolean isPregnant = false;
 
 
     public Dinosaur(String name, char displayChar, int hitPoints, int hungerLvl, Species type, Gender gender){
@@ -33,6 +34,13 @@ public abstract class Dinosaur extends Actor {
     public String getDinoName() {
         return dinoName;
     }
+
+    // setter
+    public void setPregnant(boolean pregnant) {
+        isPregnant = pregnant;
+    }
+
+    // method
 
 
     @Override
@@ -65,7 +73,7 @@ public abstract class Dinosaur extends Actor {
                 }
             }
         }
-
+        list.add(new AttackAction(this));
 
         return list;
     }

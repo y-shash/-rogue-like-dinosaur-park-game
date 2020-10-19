@@ -5,6 +5,8 @@ import edu.monash.fit2099.engine.Actor;
 import edu.monash.fit2099.engine.GameMap;
 import edu.monash.fit2099.engine.Item;
 
+import java.util.Arrays;
+
 /**
  * class represents the action for eating food
  *
@@ -52,7 +54,7 @@ public class EatFoodAction extends Action {
     public String menuDescription(Actor actor) {
         // TODO Auto-generated method stub
 
-        return actor + " eats food to heal.";
+        return actor + " eats food to heal by"+ ;
     }
 
     @Override

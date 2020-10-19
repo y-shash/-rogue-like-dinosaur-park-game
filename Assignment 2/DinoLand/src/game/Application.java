@@ -67,6 +67,7 @@ public class Application {
 		int probabilityAdjacentGrass = 10;
 		int probabilityFruitDrop = 5;
 		for (int y = 0; y <= 24; y++) {
+			System.out.println("hai");
 			for (int x = 0; x <= 79; x ++){
 				twoGrassInX = x >= 2 && gameMap.at(x - 1, y).getDisplayChar() == 'G' && gameMap.at(x - 2, y).getDisplayChar() == 'G';
 				twoGrassInY = y >= 2 && gameMap.at(x, y - 1).getDisplayChar() == 'G' && gameMap.at(x, y - 2).getDisplayChar() == 'G';
@@ -86,6 +87,7 @@ public class Application {
 
 					}
 				}
+
 
 
 

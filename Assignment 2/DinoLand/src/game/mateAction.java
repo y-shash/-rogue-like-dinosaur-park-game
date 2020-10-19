@@ -9,12 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class mateAction extends Action {
-    protected Actor target;
-    protected Dinosaur actor;
+    protected Dinosaur target;
+    protected Dinosaur giver ;
 
-    public mateAction(Actor dino){
+    public mateAction(Dinosaur dino){
         this.target = dino;
-
 
     }
 
@@ -24,9 +23,19 @@ public class mateAction extends Action {
 
     @Override
     public String execute(Actor actor, GameMap map) {
-        String result = "";
-        List<Exit> mapPoints = new ArrayList<Exit>(map.locationOf(actor).getExits());
-        return result;
+        if(actor.hasCapability(Gender.MALE) && target.hasCapability(Gender.FEMALE)){
+            target.setPregnant(true);
+        }else if(actor.hasCapability(Gender.MALE) && target.hasCapability(Gender.MALE)){
+            target.setPregnant(false);
+        }else if(actor.hasCapability(Gender.FEMALE) && target.hasCapability(Gender.FEMALE)){
+            target.setPregnant(false);
+        }else if(actor.hasCapability(Gender.FEMALE) && target.hasCapability(Gender.MALE)){
+            ((Dinosaur)actor).setPregnant(true);
+        }
+        else{
+            ((Dinosaur)actor).setPregnant(true);
+        }
+        return " ";
     }
 
     @Override

@@ -8,10 +8,11 @@ import edu.monash.fit2099.engine.*;
  *
  */
 public class Stegosaur extends Dinosaur {
+
+
 	// Will need to change this to a collection if Stegosaur gets additional Behaviours.
 	protected Behaviour behaviour = new WanderBehaviour();
 	protected int age;
-	// note moved all the common variables to Dinoclass for inheritance to allos as well, Following the dry principle
 
 	/**
 	 * Constructor.
@@ -20,7 +21,7 @@ public class Stegosaur extends Dinosaur {
 	 * @param name the name of this Stegosaur
 	 */
 	public Stegosaur(String name, Gender gender) {
-		super(name, 'S', 100, 100, Species.HERBIVORE, gender);
+		super(name, 'S', 10, 100, Species.HERBIVORE, gender);
 		behaviour = new WanderBehaviour();
 	}
 
