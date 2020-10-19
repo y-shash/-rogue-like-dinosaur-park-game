@@ -54,7 +54,7 @@ public class EatFoodAction extends Action {
     public String menuDescription(Actor actor) {
         // TODO Auto-generated method stub
 
-        return actor + " eats food to heal by"+ ;
+        return actor + " eats food to heal by";
     }
 
     @Override

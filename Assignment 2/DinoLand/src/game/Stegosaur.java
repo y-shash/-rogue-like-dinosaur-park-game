@@ -14,6 +14,7 @@ public class Stegosaur extends Dinosaur {
 	protected Behaviour behaviour = new WanderBehaviour();
 	protected int age;
 
+
 	/**
 	 * Constructor.
 	 * All Stegosaurs are represented by a 'd' and have 100 hit points.
