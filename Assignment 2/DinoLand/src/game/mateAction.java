@@ -17,16 +17,12 @@ public class mateAction extends Action {
 
     }
 
-    public mateAction() {
-
-    }
-
     @Override
     public String execute(Actor actor, GameMap map) {
         if(actor.hasCapability(Gender.MALE) && target.hasCapability(Gender.FEMALE)){
             target.setPregnant(true);
             // after 10 turns target will lay egg
-            target.layEgg();
+//            target.layEgg();
             menuDescription(actor);
         }else if(actor.hasCapability(Gender.MALE) && target.hasCapability(Gender.MALE)){
             target.setPregnant(false);
@@ -34,12 +30,12 @@ public class mateAction extends Action {
             target.setPregnant(false);
         }else if(actor.hasCapability(Gender.FEMALE) && target.hasCapability(Gender.MALE)){
             ((Dinosaur)actor).setPregnant(true);
-            ((Dinosaur) actor).layEgg();
+//            ((Dinosaur) actor).layEgg();
             menuDescription(actor);
         }
         else{
             ((Dinosaur)actor).setPregnant(true);
-            ((Dinosaur) actor).layEgg();
+//            ((Dinosaur) actor).layEgg();
             menuDescription(actor);
         }
         return " ";

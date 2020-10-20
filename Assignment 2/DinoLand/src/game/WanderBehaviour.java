@@ -25,16 +25,25 @@ public class WanderBehaviour implements Behaviour {
 	@Override
 	public Action getAction(Actor actor, GameMap map) {
 		ArrayList<Action> actions = new ArrayList<Action>();
-		actions.add(new mateAction());
+		actions.add(new mateAction((Dinosaur)actor));
+		// could add boolean to search the array, and if the object is within range
+		// This modifies the wander behaviour
+		if((((Dinosaur) actor).HungerLvl)>50){
+			Actor otherDino;
+			actions.add(new mateAction((Dinosaur)actor));
+			for(Exit exit :map.locationOf(actor).getExits()){
+
+			}
+		}
 
 		
-//		for (Exit exit : map.locationOf(actor).getExits()) {
-//            Location destination = exit.getDestination();
-//            if (destination.canActorEnter(actor)) {
-//
-//            	actions.add(exit.getDestination().getMoveAction(actor, "around", exit.getHotKey()));
-//            }
-//        }
+		for (Exit exit : map.locationOf(actor).getExits()) {
+            Location destination = exit.getDestination();
+            if (destination.canActorEnter(actor)) {
+
+            	actions.add(exit.getDestination().getMoveAction(actor, "around", exit.getHotKey()));
+            }
+        }
 
 		if (!actions.isEmpty()) {
 			return actions.get(random.nextInt(actions.size()));
