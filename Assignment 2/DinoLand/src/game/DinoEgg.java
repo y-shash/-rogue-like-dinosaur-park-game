@@ -8,5 +8,6 @@ public class DinoEgg {
     public DinoBaby hatch(){
         return dinoBaby;
     }
+
 }
 //
