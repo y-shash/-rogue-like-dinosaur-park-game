@@ -19,9 +19,9 @@ public class Food extends PortableItem{
         super.allowableActions.add(new EatFoodAction());
     }
 
-    //public void incFoodLlvl(int initFOODLvl){
-    //    IncFoodLvl += initFOODLvl;
-    //}
+    public void incFoodLlvl(int initFOODLvl){
+        IncFoodLvl += initFOODLvl;
+    }
 
     public int getIncFoodLvl() {
         return IncFoodLvl;
