@@ -4,10 +4,15 @@ import edu.monash.fit2099.engine.Action;
 import edu.monash.fit2099.engine.Actor;
 import edu.monash.fit2099.engine.GameMap;
 
+
+
 public class growAction extends Action {
     public growAction(){
 
     }
+
+    EcoPoints e1 = new EcoPoints();
+
     @Override
     public String execute(Actor actor, GameMap map) {
         boolean twoGrassInX;
@@ -25,10 +30,12 @@ public class growAction extends Action {
                 if (map.at(x, y).getDisplayChar() == '.' && (twoGrassInX || twoGrassInY)){
                     if (Grass.growingProbability(probabilityAdjacentGrass)){
                         map.at(x,y).addItem(new Grass());
+                        e1.setEcoPoints(1);
                     }
                 }
                 else if (map.at(x, y).getDisplayChar() == '.' && Grass.growingProbability(probabilityGrassSpawn)){
                     map.at(x,y).addItem(new Grass());
+                    e1.setEcoPoints(1);
                 }
 
                 if(map.at(x,y).getDisplayChar()=='+'|| map.at(x,y).getDisplayChar()=='t' || map.at(x,y).getDisplayChar()=='T'){
