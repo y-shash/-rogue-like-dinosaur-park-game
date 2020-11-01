@@ -10,5 +10,6 @@ public class DinoEgg {
         e1.setEcoPoints(100);  //if this stego then add 100 eco points
         return dinoBaby;
     }
+
 }
 //

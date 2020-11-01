@@ -27,11 +27,9 @@ public abstract class Dinosaur extends Actor {
     }
     public int getDinoHitPoints(){return dinoHitPoints;}
     public Species getType() {return type;}
-
     public Gender getGender() {
         return gender;
     }
-
     public String getDinoName() {
         return dinoName;
     }

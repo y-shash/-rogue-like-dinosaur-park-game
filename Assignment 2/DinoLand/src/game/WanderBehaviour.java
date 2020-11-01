@@ -24,11 +24,13 @@ public class WanderBehaviour implements Behaviour {
 	 */
 	@Override
 	public Action getAction(Actor actor, GameMap map) {
+		Dinosaur dino;
+		
 		ArrayList<Action> actions = new ArrayList<Action>();
 		actions.add(new mateAction((Dinosaur)actor));
 		// could add boolean to search the array, and if the object is within range
 		// This modifies the wander behaviour
-		if((((Dinosaur) actor).HungerLvl)>50){
+		if((((actor).HungerLvl)>50){
 			Actor otherDino;
 			actions.add(new mateAction((Dinosaur)actor));
 			for(Exit exit :map.locationOf(actor).getExits()){
