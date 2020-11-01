@@ -22,41 +22,69 @@ public class VendingMachine extends Item {
     public void purchaseHay(){
         if (e1.getEcoPoints() >= 20){
         e1.setEcoPoints(-20);
-    }}
+    }
+        else {
+            System.out.println("No enough Eco points to purchase");
+        }
+    }
+
 
     public void purchaseFruit(){
         if(e1.getEcoPoints() >= 30){
         e1.setEcoPoints(-30);
-    }}
+    }
+        else {
+            System.out.println("No enough Eco points to purchase");
+        }
+    }
 
     public void purchaseVegetarianMeal(){
         if (e1.getEcoPoints() >= 100){
         e1.setEcoPoints(-100);
-    }}
+    }
+        else {
+            System.out.println("No enough Eco points to purchase");
+        }
+    }
 
     public void purchaseCarnivoreMeal(){
         if (e1.getEcoPoints() >= 200){
         e1.setEcoPoints(-200);
-    }}
+    }
+        else {
+            System.out.println("No enough Eco points to purchase");
+        }
+    }
 
     public void purchaseStegosaurEgg(){
         if (e1.getEcoPoints() >= 100){
         e1.setEcoPoints(-100);
-    }}
+    }
+        else {
+            System.out.println("No enough Eco points to purchase");
+        }
+    }
 
     public void purchaseAllosaurEgg(){
         if (e1.getEcoPoints() >= 1000){
         e1.setEcoPoints(-1000);
-    }}
+    }
+        else {
+            System.out.println("No enough Eco points to purchase");
+        }
+    }
 
     public void purchaseLaserGun(){
         if (e1.getEcoPoints() >= 500){
         e1.setEcoPoints(-500);
         }
+        else {
+            System.out.println("No enough Eco points to purchase");
+        }
     }
 
 
-//o
-//m
+
+
 
 }

@@ -35,8 +35,7 @@ public class WanderBehaviour implements Behaviour {
 			actions.add(new mateAction((Dinosaur)actor));
 			for(Exit exit :map.locationOf(actor).getExits()){
 
-			}
-		}
+			}		}
 
 		
 		for (Exit exit : map.locationOf(actor).getExits()) {
