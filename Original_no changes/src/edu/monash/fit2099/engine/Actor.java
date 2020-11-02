@@ -124,6 +124,7 @@ public abstract class Actor implements ActorInterface, Capable, Printable {
 	 */
 	public void hurt(int points) {
 		hitPoints -= points;
+		System.out.println(hitPoints);
 	}
 
 	/**

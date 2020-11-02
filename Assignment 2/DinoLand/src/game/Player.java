@@ -23,6 +23,13 @@ public class  Player extends Actor {
 		}
 
 	@Override
+	public String toString() {
+		return "Player{" +
+				"hitPoints=" + hitPoints +
+				'}';
+	}
+
+	@Override
 	public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
 		// Handle multi-turn Actions
 

@@ -24,10 +24,4 @@ public class Grass extends Food{
         }
         return false;
     }
-
-
-
-
-
-
 }

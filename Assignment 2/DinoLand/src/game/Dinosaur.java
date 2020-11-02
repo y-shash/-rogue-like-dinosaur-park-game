@@ -19,7 +19,7 @@ public abstract class Dinosaur extends Actor {
         addCapability(type);
         addCapability(gender);
     }
-    DinoEgg egg = new DinoEgg();
+
 
     // getters for gender and HungerLvl
     public int getHungerLvl() {
@@ -78,8 +78,8 @@ public abstract class Dinosaur extends Actor {
 
 
 }
-
-    public DinoEgg layEgg(){
-        return egg;
-    }
+//
+//    public DinoEgg layEgg(){
+//        return egg;
+//    }
 }

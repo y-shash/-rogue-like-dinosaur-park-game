@@ -31,6 +31,7 @@ public class WanderBehaviour implements Behaviour {
             if (destination.canActorEnter(actor)) {
             	actions.add(exit.getDestination().getMoveAction(actor, "around", exit.getHotKey()));
             }
+
         }
 		
 		if (!actions.isEmpty()) {

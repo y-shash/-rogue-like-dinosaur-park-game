@@ -30,12 +30,6 @@ public class WanderBehaviour implements Behaviour {
 		actions.add(new mateAction((Dinosaur)actor));
 		// could add boolean to search the array, and if the object is within range
 		// This modifies the wander behaviour
-		if((((actor).HungerLvl)>50){
-			Actor otherDino;
-			actions.add(new mateAction((Dinosaur)actor));
-			for(Exit exit :map.locationOf(actor).getExits()){
-
-			}		}
 
 		
 		for (Exit exit : map.locationOf(actor).getExits()) {

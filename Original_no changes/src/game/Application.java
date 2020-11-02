@@ -2,6 +2,7 @@ package game;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 import edu.monash.fit2099.engine.Actor;
 import edu.monash.fit2099.engine.Display;
@@ -27,7 +28,7 @@ public class Application {
 		".....#_____#....................................................................",
 		".....#_____#....................................................................",
 		".....###.###....................................................................",
-		"................................................................................",
+		"..........+.....................................................................",
 		"......................................+++.......................................",
 		".......................................++++.....................................",
 		"...................................+++++........................................",
@@ -51,11 +52,35 @@ public class Application {
 		
 		Actor player = new Player("Player", '@', 100);
 		world.addPlayer(player, gameMap.at(9, 4));
-		
+		gameMap.at(9,4).addItem(new Hay());
+		gameMap.at(9,4).addItem(new Fruits());
+
 		// Place a pair of stegosaurs in the middle of the map
-		gameMap.at(30, 12).addActor(new Stegosaur("Stegosaur"));
-		gameMap.at(32, 12).addActor(new Stegosaur("Stegosaur"));
-		
+		gameMap.at(30, 12).addActor(new Stegosaur("Stegosaur",Gender.MALE));
+		gameMap.at(8, 3).addActor(new Stegosaur("Stegosaur",Gender.FEMALE));
+
+//		gameMap.at(8,3).addItem(new Hay());
+		// grass Growing
+		boolean twoGrassInX;
+		boolean twoGrassInY;
+		int count = 0;
+		Random randInt = new Random();
+		for(int x :gameMap.getXRange()){
+			for(int y: gameMap.getYRange()){
+				twoGrassInX= x >= 2 && gameMap.at(x - 1, y).getDisplayChar() == 'H' && gameMap.at(x - 2, y).getDisplayChar() == 'H';
+				twoGrassInY= y >= 2 && gameMap.at(x, y - 1).getDisplayChar() == 'H' && gameMap.at(x, y - 2).getDisplayChar() == 'H';
+				if (gameMap.at(x, y).getDisplayChar() == '.'){
+					if(twoGrassInX || twoGrassInY){
+						if(randInt.nextInt(100)==10){
+							gameMap.at(x,y).addItem(new Hay());
+						}
+					}
+					else if((randInt.nextInt(100)==5)){
+						gameMap.at(x,y).addItem(new Hay());
+					}
+				}
+			}
+		}
 			
 		world.run();
 	}

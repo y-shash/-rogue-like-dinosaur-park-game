@@ -15,8 +15,8 @@ public class Tree extends Ground {
 		super.tick(location);
 
 		age++;
-		if (age == 10)
-			displayChar = 't';
+		if (age == 2)
+			displayChar = 'T';
 		if (age == 20)
 			displayChar = 'T';
 	}
