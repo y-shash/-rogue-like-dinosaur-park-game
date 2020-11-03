@@ -14,7 +14,7 @@ public class searchTree extends Action {
     public String execute(Actor actor, GameMap map) {
         // basically giving the tree a 10% chance to have a fruit when searching
         boolean val = randInt.nextInt(10)==1;
-        System.out.println(val);
+//        System.out.println(val);
         if(val){
             actor.addItemToInventory(new Fruits());
             return actor + "found a fruit";

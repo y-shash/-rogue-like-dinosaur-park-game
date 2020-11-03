@@ -58,6 +58,7 @@ public class Application {
 		gameMap.at(30, 12).addActor(richyStego);
 		gameMap.at(32, 12).addActor(wendyStego);
 
+
 		
 		// place some grass with respect to probability as well as control whether a tree drops a fruit each turn
 		boolean twoGrassInX;

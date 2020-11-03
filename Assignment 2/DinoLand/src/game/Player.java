@@ -9,6 +9,7 @@ public class  Player extends Actor {
 
 	private Menu menu = new Menu();
 	private Behaviour behaviour;
+	private EcoPoints playerEcopoints;
 
 	/**
 	 * Constructor.
@@ -26,7 +27,7 @@ public class  Player extends Actor {
 	public String toString() {
 		return "Player{" +
 				"hitPoints=" + hitPoints +
-				'}';
+				"EcoPoints"+ playerEcopoints+'}';
 	}
 
 	@Override

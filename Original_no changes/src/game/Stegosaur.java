@@ -10,21 +10,30 @@ import edu.monash.fit2099.engine.*;
 public class Stegosaur extends Dinosaur {
 	// Will need to change this to a collection if Stegosaur gets additional Behaviours.
 	private Behaviour behaviour;
-	/** 
+	private Dinosaur other=null;
+	int age = 0;
+	Behaviour[] behaviours = {new WanderBehaviour()};
+	/**
 	 * Constructor.
 	 * All Stegosaurs are represented by a 'd' and have 100 hit points.
-	 * 
+	 *
 	 * @param name the name of this Stegosaur
 	 */
 	public Stegosaur(String name, Gender gender) {
-		super(name, 'S',100, gender, Species.HERBIVORES);
-		Behaviour[] behaviour = {new WanderBehaviour()};
-	}
+		super(name, '-', 100, gender, Species.HERBIVORES);
 
+	}
+	private void setDisplayChar(){
+		age+=1;
+		if(age == 5)
+			this.displayChar='s';
+		if(age == 10)
+			this.displayChar='S';
+	}
 
 	@Override
 	public Actions getAllowableActions(Actor otherActor, String direction, GameMap map) {
-		Actions actions = super.getAllowableActions(otherActor,direction,map);
+		Actions actions = super.getAllowableActions(otherActor, direction, map);
 		actions.add(new AttackAction(this));
 		actions.add(new feedAction(this));
 		return actions;
@@ -32,22 +41,30 @@ public class Stegosaur extends Dinosaur {
 
 	/**
 	 * Figure out what to do next.
-	 * 
+	 * <p>
 	 * FIXME: Stegosaur wanders around at random, or if no suitable MoveActions are available, it
 	 * just stands there.  That's boring.
-	 * 
+	 *
 	 * @see edu.monash.fit2099.engine.Actor#playTurn(Actions, Action, GameMap, Display)
 	 */
 	@Override
 	public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
-//		Action wander = behaviour.getAction(this, map);
+		Display animals = new Display();
+		animals.println("Stego Health: "+ this.hitPoints);
 		this.hurt(1);
-		hungryDino(display,map);
-		Action wander = null;
-
-		if (wander != null)
-			return wander;
-		return new DoNothingAction();
+		hungryDino(display, map);
+		setDisplayChar();
+		if (this.isConscious()) {
+			for (Behaviour behaviour : behaviours) {
+				Action action = behaviour.getAction(this, map);
+				if (action!=null)
+//					System.out.println(action);
+					return action;
+			}
+			return new DoNothingAction();
+		}
+		else{
+			return new DoNothingAction();
+		}
 	}
-
 }

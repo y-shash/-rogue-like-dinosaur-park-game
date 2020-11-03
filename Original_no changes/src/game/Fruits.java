@@ -8,6 +8,7 @@ public class Fruits extends PortableItem {
 
     public Fruits() {
         super("Fruit", '*');
+
     }
 
     @Override

@@ -30,16 +30,16 @@ public abstract class Dinosaur extends Actor {
             s += this.name + " at "+"("+x +","+ y+")" + " is getting hungry";
             display.println(s);
         }
-        else if(!this.isConscious()) {
+        else{
+            s+=this.name+ " is "+ " happy";
+        }
+        if(!this.isConscious()) {
             map.removeActor(this);
             t_location.addItem(corpse);
             s+=this.name + " at "+"("+x +","+ y+")" +" has died from hunger";
-            display.println(s);
         }
-        else{
-            s+=this.name+ " is "+ " happy";
-            display.println(s);
-        }
+
+        display.println(s);
     }
 
 }

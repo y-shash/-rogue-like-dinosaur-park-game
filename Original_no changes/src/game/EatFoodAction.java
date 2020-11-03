@@ -23,7 +23,7 @@ public class EatFoodAction extends Action {
 
     @Override
     public String menuDescription(Actor actor) {
-        return "Eat whats in the inventory?";
+        return "Eat Food?";
     }
     @Override
     public String hotkey() {

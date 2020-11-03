@@ -54,16 +54,17 @@ public class Application {
 		world.addPlayer(player, gameMap.at(9, 4));
 		gameMap.at(9,4).addItem(new Hay());
 		gameMap.at(9,4).addItem(new Fruits());
+		gameMap.at(8,3).addItem(new VendingMachine(gameMap));
 
 		// Place a pair of stegosaurs in the middle of the map
 		gameMap.at(30, 12).addActor(new Stegosaur("Stegosaur",Gender.MALE));
-		gameMap.at(8, 3).addActor(new Stegosaur("Stegosaur",Gender.FEMALE));
+		gameMap.at(29, 12).addActor(new Stegosaur("Stegosaur",Gender.FEMALE));
+
 
 //		gameMap.at(8,3).addItem(new Hay());
 		// grass Growing
 		boolean twoGrassInX;
 		boolean twoGrassInY;
-		int count = 0;
 		Random randInt = new Random();
 		for(int x :gameMap.getXRange()){
 			for(int y: gameMap.getYRange()){
@@ -81,7 +82,6 @@ public class Application {
 				}
 			}
 		}
-			
 		world.run();
 	}
 }

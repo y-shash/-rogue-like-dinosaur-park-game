@@ -10,8 +10,6 @@ import java.util.List;
 
 public class mateAction extends Action {
     protected Dinosaur target;
-    protected Dinosaur giver ;
-
     public mateAction(Dinosaur dino){
         this.target = dino;
 
@@ -45,6 +43,5 @@ public class mateAction extends Action {
     public String menuDescription(Actor actor) {
         return actor+" is moving to mate";
     }
-
 
 }
