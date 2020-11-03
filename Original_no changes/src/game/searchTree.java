@@ -6,6 +6,7 @@ import java.util.Random;
 
 public class searchTree extends Action {
     Random randInt= new Random();
+    EcoPoints e1;
     Ground tree;
 //    public searchTree(Ground Tree){
 //        this.tree = Tree;
@@ -17,13 +18,18 @@ public class searchTree extends Action {
 //        System.out.println(val);
         if(val){
             actor.addItemToInventory(new Fruits());
-            return actor + "found a fruit";
+            if(actor instanceof Player) {
+                e1 = ((Player) actor).getE1();
+                e1.setEcoPoints(20);
+                return "ecopoints+++ fruits are rare";
+            }
+
+            return actor + "found a fruit,";
         }
         else{
             return actor + "could not find fruits";
         }
     }
-
     @Override
     public String menuDescription(Actor actor) {
         return "search Tree for fruits";

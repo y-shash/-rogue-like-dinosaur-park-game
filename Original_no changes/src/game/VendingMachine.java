@@ -1,14 +1,12 @@
 package game;
 
-import edu.monash.fit2099.engine.Actor;
-import edu.monash.fit2099.engine.Display;
-import edu.monash.fit2099.engine.GameMap;
-import edu.monash.fit2099.engine.Item;
+import edu.monash.fit2099.engine.*;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class VendingMachine extends Item {
-    EcoPoints e1 = new EcoPoints();
+    protected EcoPoints e1;
     private static final int HAY_ECO_POINTS = 20;
     private static final int FRUIT_ECO_POINTS = 30;
     private static final int VEGETARIAN_ECO_POINTS = 100;
@@ -17,9 +15,11 @@ public class VendingMachine extends Item {
     private static final int ALLOSAUR_EGG_ECO_POINTS = 1000;
     private static final int LASER_GUN_ECO_POINTS = 500;
 
-    public VendingMachine(GameMap map){
+    public VendingMachine(GameMap map, Actor player){
         super("VendingMachine", 'v', false);
-        super.allowableActions.add(new purchaseAction(this));
+        allowableActions.add(new purchaseAction(this));
+        if(player instanceof Player)
+            e1= ((Player) player).getE1();
     }
 
     public void purchaseHay(){
@@ -87,7 +87,8 @@ public class VendingMachine extends Item {
     }
 
     @Override
-    public String toString() {
-        return super.toString();
+    public List<Action> getAllowableActions() {
+        return super.getAllowableActions();
     }
+
 }

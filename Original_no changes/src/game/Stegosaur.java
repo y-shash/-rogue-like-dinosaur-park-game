@@ -56,7 +56,8 @@ public class Stegosaur extends Dinosaur {
 		setDisplayChar();
 		if (this.isConscious()) {
 			for (Behaviour behaviour : behaviours) {
-				Action action = behaviour.getAction(this, map);
+//				Action action = behaviour.getAction(this, map);
+				Action action = null;
 				if (action!=null)
 //					System.out.println(action);
 					return action;

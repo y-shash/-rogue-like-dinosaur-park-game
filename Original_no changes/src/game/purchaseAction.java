@@ -47,17 +47,34 @@ public class purchaseAction extends Action {
             res+="hello";
             return res;
         }
-        else if(choice == '3')
+        else if(choice == '3'){
+            vendingMachine.purchaseVegetarianMeal();
+            return res;
+        }
+        else if(choice == '4'){
+            vendingMachine.purchaseCarnivoreMeal();
+            return res;
+        }
+        else if(choice == '5'){
+            vendingMachine.purchaseStegosaurEgg();
+            return res;
+        }
+        else if(choice == '6'){
+            vendingMachine.purchaseAllosaurEgg();
+            return res;
+        }
+        else if(choice == '7'){
+            vendingMachine.purchaseAllosaurEgg();
+            return res;
+        }
         else {
             return "incorrect choice";
         }
     }
     @Override
     public String execute(Actor actor, GameMap map) {
-
     return purchaseIt(actor,map);
     }
-
     @Override
     public String menuDescription(Actor actor) {
         return "Use the Vending Machine?";

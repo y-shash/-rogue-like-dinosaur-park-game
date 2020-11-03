@@ -2,19 +2,26 @@ package game;
 
 import edu.monash.fit2099.engine.*;
 
+import java.util.List;
+
 
 public class feedAction extends Action {
     protected Dinosaur target;
+    protected EcoPoints e1;
     public feedAction( Dinosaur target){
         this.target= target;
     }
     @Override
     public String execute(Actor actor, GameMap map) {
-
         for(Item items : actor.getInventory()){
             if(items.toString().equals("Hay")){
                 target.heal(20);
-//                actor.removeItemFromInventory(items);
+                actor.removeItemFromInventory(items);
+                if(actor instanceof Player) {
+                    e1 = ((Player) actor).getE1();
+                    e1.setEcoPoints(20);
+                    return "added eco points";
+                }
                 return actor +" feeds"+ items+" to "+target;
             }
             else{

@@ -10,6 +10,7 @@ import java.util.Random;
 public class Player extends Actor {
 
 	private Menu menu = new Menu();
+	protected EcoPoints e1= new EcoPoints();
 
 	/**
 	 * Constructor.
@@ -20,6 +21,10 @@ public class Player extends Actor {
 	 */
 	public Player(String name, char displayChar, int hitPoints) {
 		super(name, displayChar, hitPoints);
+	}
+
+	public EcoPoints getE1() {
+		return e1;
 	}
 
 	@Override

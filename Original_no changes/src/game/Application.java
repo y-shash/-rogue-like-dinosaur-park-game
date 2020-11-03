@@ -54,10 +54,10 @@ public class Application {
 		world.addPlayer(player, gameMap.at(9, 4));
 		gameMap.at(9,4).addItem(new Hay());
 		gameMap.at(9,4).addItem(new Fruits());
-		gameMap.at(8,3).addItem(new VendingMachine(gameMap));
+		gameMap.at(8,3).addItem(new VendingMachine(gameMap,player));
 
 		// Place a pair of stegosaurs in the middle of the map
-		gameMap.at(30, 12).addActor(new Stegosaur("Stegosaur",Gender.MALE));
+		gameMap.at(29, 11).addActor(new Stegosaur("Stegosaur",Gender.MALE));
 		gameMap.at(29, 12).addActor(new Stegosaur("Stegosaur",Gender.FEMALE));
 
 
