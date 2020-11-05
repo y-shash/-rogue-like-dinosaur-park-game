@@ -4,7 +4,7 @@ package game;
 * */
 public enum Species {
     HERBIVORE,
-    CARNIVORE
-
+    CARNIVORE,
+    OMNNIVORE
 
 }

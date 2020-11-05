@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import edu.monash.fit2099.demo.mars.DemoCapabilities;
+import edu.monash.fit2099.demo.mars.MartianItem;
 import edu.monash.fit2099.engine.*;
 
 /**
@@ -46,11 +48,64 @@ public class Application {
 		"..........................................................................++....",
 		"................................................................................");
 
+
+
+				List<String> map2 = Arrays.asList(
+				"................................................................................",
+				"................................................................................",
+				".....#######....................................................................",
+				".....#_____#....................................................................",
+				".....#_____#....................................................................",
+				".....###.###....................................................................",
+				"................................................................................",
+				"......................................+++.......................................",
+
+				".......................................++++.....................................",
+				"...................................+++++........................................",
+				".....................................++++++.....................................",
+				"......................................+++.......................................",
+				".....................................+++........................................",
+				"................................................................................",
+				"............+++.................................................................",
+				".............+++++..............................................................",
+				"...............++........................................+++++..................",
+				".............+++....................................++++++++....................",
+				"............+++.......................................+++.......................",
+				"................................................................................",
+				".........................................................................++.....",
+				"........................................................................++.++...",
+				".........................................................................++++...",
+				"..........................................................................++....",
+				"................................................................................");
+
+			//the new map
+		GameMap secondMap = new GameMap(groundFactory, map2);
+		world.addGameMap((secondMap));
+		GrassOnMap g2 = new GrassOnMap(secondMap);
+
+			//adding player in the map
+		Actor player2 = new Player("Player", '@', 100);
+		world.addPlayer(player2, secondMap.at(9, 4));
+
+			//the current map
 		GameMap gameMap = new GameMap(groundFactory, map );
 		world.addGameMap(gameMap);
-		
+		GrassOnMap g1 = new GrassOnMap(gameMap);
+
+		//adding player in existing map
 		Actor player = new Player("Player", '@', 100);
 		world.addPlayer(player, gameMap.at(9, 4));
+
+		//the way to the new map
+		MartianItem rocket = new MartianItem("Rocket", '^', false);
+		rocket.addAction(new MoveActorAction(secondMap.at(7, 2), "to new map!"));
+		gameMap.at(1, 1).addItem(rocket);
+
+
+		Item spaceSuit = new MartianItem("space suit", '[', true);
+		spaceSuit.addCapability(DemoCapabilities.SPACETRAVELLER);
+		gameMap.at(0, 1).addItem(spaceSuit);
+
 		
 		// Place a pair of stegosaurs in the middle of the map
 		Stegosaur richyStego = new Stegosaur("richy", Gender.MALE);
@@ -59,41 +114,8 @@ public class Application {
 		gameMap.at(32, 12).addActor(wendyStego);
 
 
-		
-		// place some grass with respect to probability as well as control whether a tree drops a fruit each turn
-		boolean twoGrassInX;
-		boolean twoGrassInY;
-		boolean treeDrop;
-
-		int probabilityGrassSpawn = 2;
-		int probabilityAdjacentGrass = 10;
-		int probabilityFruitDrop = 5;
-		for (int y = 0; y <= 24; y++) {
-			for (int x = 0; x <= 79; x ++){
-				twoGrassInX = x >= 2 && gameMap.at(x - 1, y).getDisplayChar() == 'G' && gameMap.at(x - 2, y).getDisplayChar() == 'G';
-				twoGrassInY = y >= 2 && gameMap.at(x, y - 1).getDisplayChar() == 'G' && gameMap.at(x, y - 2).getDisplayChar() == 'G';
-
-				if (gameMap.at(x, y).getDisplayChar() == '.' && (twoGrassInX || twoGrassInY)){
-					if (Grass.growingProbability(probabilityAdjacentGrass)){
-						gameMap.at(x,y).addItem(new Grass());
-					}
-				}
-				else if (gameMap.at(x, y).getDisplayChar() == '.' && Grass.growingProbability(probabilityGrassSpawn)){
-					gameMap.at(x,y).addItem(new Grass());
-				}
-
-				if(gameMap.at(x,y).getDisplayChar()=='+'|| gameMap.at(x,y).getDisplayChar()=='t' || gameMap.at(x,y).getDisplayChar()=='T'){
-					if(Tree.dropFruitChance(probabilityFruitDrop)){
-						gameMap.at(x,y).addItem(new Fruits());
-
-					}
-				}
 
 
-
-
-			}
-		}
 		world.run();
 	}
 }
