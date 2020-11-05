@@ -13,6 +13,8 @@ public class VendingMachine extends Item {
     private static final int VEGETARIAN_ECO_POINTS = 100;
     private static final int CARNIVORE_ECO_POINTS = 500;
     private static final int STEGOSAUR_EGG_ECO_POINTS = 200;
+    private static final int AGILISAURUS_EGG_ECO_POINTS = 500;
+    private static final int ARCHAEOPTERYX_EGG_ECO_POINTS = 500;
     private static final int ALLOSAUR_EGG_ECO_POINTS = 1000;
     private static final int LASER_GUN_ECO_POINTS = 500;
 
@@ -68,6 +70,25 @@ public class VendingMachine extends Item {
             System.out.println("No enough Eco points to purchase");
         }
     }
+
+    public void purchaseAgilisaurusEgg(){
+        if (e1.getEcoPoints() >= 500){
+            e1.setEcoPoints(-500);
+        }
+        else {
+            System.out.println("No enough Eco points to purchase");
+        }
+    }
+
+    public void purchaseArchaeopteryxEgg(){
+        if (e1.getEcoPoints() >= 500){
+            e1.setEcoPoints(-500);
+        }
+        else {
+            System.out.println("No enough Eco points to purchase");
+        }
+    }
+
 
     public void purchaseAllosaurEgg(){
         if (e1.getEcoPoints() >= 1000){

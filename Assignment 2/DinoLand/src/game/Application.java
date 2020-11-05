@@ -113,6 +113,12 @@ public class Application {
 		gameMap.at(30, 12).addActor(richyStego);
 		gameMap.at(32, 12).addActor(wendyStego);
 
+		//Two Agilisaurs on the map
+		Agilisaurus Agili1 = new Agilisaurus("Agili1", Gender.FEMALE);
+		Agilisaurus Agili2 = new Agilisaurus("Agili2", Gender.MALE);
+		gameMap.at(30, 16).addActor(Agili1);
+		gameMap.at(31, 14).addActor(Agili2);
+
 
 
 

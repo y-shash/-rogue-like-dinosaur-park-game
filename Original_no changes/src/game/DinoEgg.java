@@ -29,7 +29,6 @@ public class DinoEgg extends Dinosaur {
     public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
         setDisplaychar(map);
 //        hatch()
-        return nu5
-        ll;
+        return null;
     }
 }
