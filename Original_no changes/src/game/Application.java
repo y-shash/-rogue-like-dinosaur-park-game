@@ -49,6 +49,7 @@ public class Application {
 		"................................................................................");
 		GameMap gameMap = new GameMap(groundFactory, map );
 		world.addGameMap(gameMap);
+
 		
 		Actor player = new Player("Player", '@', 100);
 		world.addPlayer(player, gameMap.at(9, 4));
@@ -58,7 +59,7 @@ public class Application {
 
 		// Place a pair of stegosaurs in the middle of the map
 		gameMap.at(29, 11).addActor(new Stegosaur("Stegosaur",Gender.MALE));
-		gameMap.at(29, 12).addActor(new Stegosaur("Stegosaur",Gender.FEMALE));
+		gameMap.at(37, 12).addActor(new Stegosaur("Stegosaur",Gender.FEMALE));
 
 
 //		gameMap.at(8,3).addItem(new Hay());

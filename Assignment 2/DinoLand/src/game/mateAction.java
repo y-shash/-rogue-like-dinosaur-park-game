@@ -10,9 +10,11 @@ import java.util.List;
 
 public class mateAction extends Action {
     protected Dinosaur target;
+
+    public List<Behaviour> actionFactories = new ArrayList<Behaviour>();
+
     public mateAction(Dinosaur dino){
         this.target = dino;
-
     }
 
     @Override

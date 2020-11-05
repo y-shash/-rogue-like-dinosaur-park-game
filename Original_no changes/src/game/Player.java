@@ -39,9 +39,20 @@ public class Player extends Actor {
 		int playerY = player.y();
 		Ground someGround = map.at(playerX,playerY).getGround();
 		boolean onGround = map.isAnActorAt(player) && someGround.getDisplayChar()== 'T';
+		int Count = 0;
 		if(onGround){
 			actions.add(new searchTree());
+			Count+=1;
+			System.out.println(Count);
 		}
+		else if(Count == 2){
+			actions.remove(new searchTree());
+			System.out.println("does it?");
+		}
+		else{
+			Count+=1;
+		}
+
 		System.out.println("near a tree:"+onGround);
 
 		return menu.showMenu(this, actions, display);

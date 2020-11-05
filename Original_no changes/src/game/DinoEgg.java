@@ -1,21 +1,35 @@
 package game;
 
-import edu.monash.fit2099.engine.Ground;
+import edu.monash.fit2099.engine.*;
 
-public class DinoEgg extends DinoBaby {
-    EcoPoints e1 = new EcoPoints();
+public class DinoEgg extends Dinosaur {
     /**
      * Constructor.
      *
      * @param displayChar character to display for this type of terrain
      */
-    public DinoEgg(char displayChar,Species species, Gender gender)
-    {
-        super("Egg",'o',species,gender);
+//    DinoBaby babysteg = new DinoBaby("BabySteg");
+    protected int age=0;
+    public DinoEgg(String name, Species species, Gender gender){
+        super(name,'o',10,gender,species);
+    }
+    public DinoBaby hatch(DinoBaby dinoBaby){
+        return dinoBaby;
     }
 
-    public DinoBaby hatch(DinoBaby dinoBaby){
-        e1.setEcoPoints(100);  //if this stego then add 100 eco points
-        return dinoBaby;
+    private void setDisplaychar(GameMap map){
+        if (age == 5) {
+            Location egg = map.locationOf(this);
+            map.removeActor(this);
+            map.addActor(new DinoBaby("theseus", 't', Species.HERBIVORES, Gender.FEMALE), egg);
+        }
+    }
+
+    @Override
+    public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
+        setDisplaychar(map);
+//        hatch()
+        return nu5
+        ll;
     }
 }

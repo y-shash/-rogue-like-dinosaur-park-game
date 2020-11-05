@@ -7,15 +7,10 @@ import java.util.Random;
 public class searchTree extends Action {
     Random randInt= new Random();
     EcoPoints e1;
-    Ground tree;
-//    public searchTree(Ground Tree){
-//        this.tree = Tree;
-//    }
     @Override
     public String execute(Actor actor, GameMap map) {
         // basically giving the tree a 10% chance to have a fruit when searching
         boolean val = randInt.nextInt(10)==1;
-//        System.out.println(val);
         if(val){
             actor.addItemToInventory(new Fruits());
             if(actor instanceof Player) {
@@ -23,7 +18,6 @@ public class searchTree extends Action {
                 e1.setEcoPoints(20);
                 return "ecopoints+++ fruits are rare";
             }
-
             return actor + "found a fruit,";
         }
         else{

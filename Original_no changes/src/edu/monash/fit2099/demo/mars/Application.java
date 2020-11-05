@@ -25,6 +25,7 @@ public class Application {
         gameMap = new GameMap(groundFactory, map);
         world.addGameMap(gameMap);
 
+            //////////////////
         List<String> marsMap = Arrays.asList(
                 "ooooooooooooo",
                 "oooooooo...oo",

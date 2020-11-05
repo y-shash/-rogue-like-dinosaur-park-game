@@ -4,7 +4,8 @@ import edu.monash.fit2099.engine.*;
 
 import java.util.HashMap;
 import java.util.List;
-
+/*
+* */
 public class VendingMachine extends Item {
     protected EcoPoints e1;
     private static final int HAY_ECO_POINTS = 20;

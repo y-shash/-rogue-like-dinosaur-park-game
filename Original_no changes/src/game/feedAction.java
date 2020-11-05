@@ -16,10 +16,10 @@ public class feedAction extends Action {
         for(Item items : actor.getInventory()){
             if(items.toString().equals("Hay")){
                 target.heal(20);
-                actor.removeItemFromInventory(items);
                 if(actor instanceof Player) {
                     e1 = ((Player) actor).getE1();
                     e1.setEcoPoints(20);
+                    actor.removeItemFromInventory(items);
                     return "added eco points";
                 }
                 return actor +" feeds"+ items+" to "+target;

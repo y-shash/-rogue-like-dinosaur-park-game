@@ -8,6 +8,7 @@ public class Tree extends Ground {
 
 	public Tree() {
 		super('+');
+
 	}
 
 	@Override

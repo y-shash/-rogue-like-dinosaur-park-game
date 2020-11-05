@@ -5,6 +5,7 @@ import edu.monash.fit2099.engine.*;
 public abstract class Dinosaur extends Actor {
     private final Gender gender;
     private final Species species;
+    private boolean isPregnant = false;
     /**
      * Constructor.
      *  @param name        the name of the Actor
@@ -18,6 +19,14 @@ public abstract class Dinosaur extends Actor {
         this.species = species;
         super.addCapability(gender);
         super.addCapability(species);
+    }
+
+    public void setPregnant(boolean pregnant) {
+        this.isPregnant = pregnant;
+    }
+
+    public boolean getIsPregnant() {
+        return isPregnant;
     }
 
     public void hungryDino(Display display, GameMap map){

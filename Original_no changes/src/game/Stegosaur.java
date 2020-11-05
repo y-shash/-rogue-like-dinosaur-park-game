@@ -3,6 +3,10 @@ package game;
 
 import edu.monash.fit2099.engine.*;
 
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * A herbivorous dinosaur.
  *
@@ -13,6 +17,7 @@ public class Stegosaur extends Dinosaur {
 	private Dinosaur other=null;
 	int age = 0;
 	Behaviour[] behaviours = {new WanderBehaviour()};
+	ArrayList<Behaviour>behaviours1=new ArrayList<Behaviour>();
 	/**
 	 * Constructor.
 	 * All Stegosaurs are represented by a 'd' and have 100 hit points.
@@ -30,6 +35,7 @@ public class Stegosaur extends Dinosaur {
 		if(age == 10)
 			this.displayChar='S';
 	}
+
 
 	@Override
 	public Actions getAllowableActions(Actor otherActor, String direction, GameMap map) {
@@ -51,21 +57,23 @@ public class Stegosaur extends Dinosaur {
 	public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
 		Display animals = new Display();
 		animals.println("Stego Health: "+ this.hitPoints);
+		behaviours1.add(0, new mateBehaviour(Dinosaur.class, 10));
 		this.hurt(1);
 		hungryDino(display, map);
 		setDisplayChar();
 		if (this.isConscious()) {
-			for (Behaviour behaviour : behaviours) {
-//				Action action = behaviour.getAction(this, map);
-				Action action = null;
+//			if(this.hitPoints>90 && (this.getDisplayChar()=='S')){
+//				behaviours1.remove(0);
+//				behaviours1.add(0, new mateBehaviour(Stegosaur.class, 30));
+//			}
+			for (Behaviour behaviour : behaviours1) {
+				Action action = behaviour.getAction(this, map);
+				System.out.println(behaviour.getClass());
+//				Action action = null;
 				if (action!=null)
-//					System.out.println(action);
 					return action;
 			}
-			return new DoNothingAction();
 		}
-		else{
-			return new DoNothingAction();
-		}
+		return new DoNothingAction();
 	}
 }

@@ -9,6 +9,7 @@ public class Tree extends Ground {
 	public Tree() {
 		super('+');
 		addCapability(Status.ALIVE);
+
 	}
 
 	@Override
