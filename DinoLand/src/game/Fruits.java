@@ -13,14 +13,14 @@ public class Fruits extends PortableItem {
 
     @Override
     public void tick(Location location) {
-        super.tick(location);
-        age++;
-        if(age>10)
-            displayChar='f';
-        if(age>30)
-            displayChar='F';
-        if(age>40)
-            name = "RottenFruit";
+//        super.tick(location);
+//        age++;
+//        if(age>10)
+//            displayChar='f';
+//        if(age>30)
+//            displayChar='F';
+//        if(age>40)
+//            name = "RottenFruit";
 
     }
 }
