@@ -42,6 +42,7 @@ public class Stegosaur extends Dinosaur {
 		Actions actions = super.getAllowableActions(otherActor, direction, map);
 		actions.add(new AttackAction(this));
 		actions.add(new feedAction(this));
+		actions.add(new DrinkWaterAction(this));
 		return actions;
 	}
 
