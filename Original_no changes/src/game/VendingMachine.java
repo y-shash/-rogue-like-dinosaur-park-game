@@ -70,6 +70,10 @@ public class VendingMachine extends Item {
             System.out.println("No enough Eco points to purchase");
         }
     }
+    public void exit(){
+        System.out.println("exiting store......");
+    }
+
 
     public void purchaseAgilisaurusEgg(){
         if (e1.getEcoPoints() >= 500){

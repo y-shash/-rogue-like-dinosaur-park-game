@@ -24,9 +24,9 @@ public class purchaseAction extends Action {
         display.println("-----------DINO SERVER--------");
         display.println("What would you like to buy?");
         display.println("------------------------------");
-        String[] choices = {"Hay","Fruit","VegetarianMeal","CarnivoreMeal","Stegosaur Egg","Allosaur Egg", "Laser Gun"};
-        char [] hotkeys = {'1','2','3','4','5','6','7'};
-        for(int i =0; i<7;i++){
+        String[] choices = {"Hay","Fruit","VegetarianMeal","CarnivoreMeal","Stegosaur Egg","Allosaur Egg", "Laser Gun","ArchaeopteryxEgg","AgilisaurusEgg" };
+        char [] hotkeys = {'a','b','c','d','e','f','g','h','i'};
+        for(int i =0; i<9;i++){
             display.println(hotkeys[i]+": Purchase"+ choices[i]);
             itemToBuy.put(hotkeys[i],choices[i]);
         }
@@ -36,7 +36,7 @@ public class purchaseAction extends Action {
         }while(!itemToBuy.containsKey(choice));
 
         String res = "";
-        if(choice == '1'){
+        if(choice == 'a'){
             vendingMachine.purchaseHay();
             Hay bought = new Hay();
             actor.addItemToInventory(bought);
@@ -44,7 +44,7 @@ public class purchaseAction extends Action {
             res+="hello";
             return res;
         }
-        else if(choice == '2'){
+        else if(choice == 'b'){
             vendingMachine.purchaseFruit();
             Fruits bought = new Fruits();
             actor.addItemToInventory(bought);
@@ -52,24 +52,42 @@ public class purchaseAction extends Action {
             res+="hello";
             return res;
         }
-        else if(choice == '3'){
+        else if(choice == 'c'){
             vendingMachine.purchaseVegetarianMeal();
             return res;
         }
-        else if(choice == '4'){
+        else if(choice == 'd'){
             vendingMachine.purchaseCarnivoreMeal();
             return res;
         }
-        else if(choice == '5'){
+        else if(choice == 'e'){
             vendingMachine.purchaseStegosaurEgg();
             return res;
         }
-        else if(choice == '6'){
+        else if(choice == 'f'){
             vendingMachine.purchaseAllosaurEgg();
             return res;
         }
-        else if(choice == '7'){
-            vendingMachine.purchaseAllosaurEgg();
+        else if(choice == 'g'){
+            vendingMachine.purchaseLaserGun();
+//            LaserGun bought = new LaserGun();
+//            actor.addItemToInventory(bought);
+//            display.println(bought.toString()+" purchased");
+
+            return res;
+        }
+        else if(choice == 'h'){
+            vendingMachine.purchaseArchaeopteryxEgg();
+//            LaserGun bought = new LaserGun();
+//            actor.addItemToInventory(bought);
+//            display.println(bought.toString()+" purchased");
+            return res;
+        }
+        else if(choice == 'i'){
+            vendingMachine.purchaseAgilisaurusEgg();
+//            LaserGun bought = new LaserGun();
+//            actor.addItemToInventory(bought);
+//            display.println(bought.toString()+" purchased");
             return res;
         }
         else {
