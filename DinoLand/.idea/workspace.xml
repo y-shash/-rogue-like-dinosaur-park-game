@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f85509bc-34a6-4ca1-bee0-3c0721321063" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/game/DrinkWaterAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/ThirstyBehaviour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Water.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Stegosaur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Stegosaur.java" afterDir="false" />
-    </list>
+    <list default="true" id="f85509bc-34a6-4ca1-bee0-3c0721321063" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +90,14 @@
       <option name="presentableId" value="Default" />
       <updated>1604642619805</updated>
     </task>
+    <task id="LOCAL-00001" summary="Implemented the Thirst methods">
+      <created>1604664242294</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604664242294</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +112,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implemented the Thirst methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented the Thirst methods" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1877" height="340" key="GridCell.Tab.0.bottom" timestamp="1604644176775">
