@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="DinoLand:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/DinoLand_jar</output-path>
-    <root id="archive" name="DinoLand.jar">
-      <element id="module-output" name="DinoLand" />
-    </root>
-  </artifact>
-</component>

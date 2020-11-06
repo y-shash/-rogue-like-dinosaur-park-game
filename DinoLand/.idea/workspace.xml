@@ -16,48 +16,30 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dca508c-9a0b-4abc-a56f-8552feb87e1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f85509bc-34a6-4ca1-bee0-3c0721321063" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
-  </component>
-  <component name="ProjectId" id="1hrynN64IsaehbqrYmyCAo0NbjT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1ju8Sp5Lz4bhVHDS8VI4aC5RKx3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment 2/DinoLand" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="game.Application" />
-      <module name="DinoLand" />
+      <module name="project" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="game.*" />
@@ -77,11 +59,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9dca508c-9a0b-4abc-a56f-8552feb87e1c" name="Default Changelist" comment="" />
-      <created>1600783676217</created>
+      <changelist id="f85509bc-34a6-4ca1-bee0-3c0721321063" name="Default Changelist" comment="" />
+      <created>1604642619805</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1600783676217</updated>
+      <updated>1604642619805</updated>
     </task>
     <servers />
   </component>
@@ -90,53 +72,49 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="633" y="147" key="FileChooserDialogImpl" timestamp="1602587671788">
+    <state width="1877" height="340" key="GridCell.Tab.0.bottom" timestamp="1604644176775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="422" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1602511863578" />
-    <state x="633" y="147" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602587671788" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1600859041258">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604644176775" />
+    <state width="1877" height="340" key="GridCell.Tab.0.center" timestamp="1604644176775">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600859041258" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1600859041257">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="340" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604644176775" />
+    <state width="1877" height="340" key="GridCell.Tab.0.left" timestamp="1604644176774">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600859041257" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1600859041256">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="340" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604644176774" />
+    <state width="1877" height="340" key="GridCell.Tab.0.right" timestamp="1604644176775">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600859041256" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1600859041257">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="340" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604644176775" />
+    <state width="1877" height="340" key="GridCell.Tab.1.bottom" timestamp="1604644176775">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600859041257" />
-    <state x="151" y="0" key="SettingsEditor" timestamp="1600784351268">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1877" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604644176775" />
+    <state width="1877" height="340" key="GridCell.Tab.1.center" timestamp="1604644176775">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="151" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1600784351268" />
+    <state width="1877" height="340" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604644176775" />
+    <state width="1877" height="340" key="GridCell.Tab.1.left" timestamp="1604644176775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="340" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604644176775" />
+    <state width="1877" height="340" key="GridCell.Tab.1.right" timestamp="1604644176775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="340" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604644176775" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Original_no_changes$Application.ic" NAME="Application Coverage Results" MODIFIED="1604642907136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>game.*</FILTER>
+    </SUITE>
   </component>
 </project>
