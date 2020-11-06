@@ -7,6 +7,11 @@ import edu.monash.fit2099.engine.GameMap;
 
 import java.util.HashMap;
 public class purchaseAction extends Action {
+    /**
+     * Function deals with the ability of the player to purchase items
+     *
+     * @author Ashwin Sarith
+     */
     protected VendingMachine vendingMachine;
     purchaseAction(VendingMachine venDingMachine){
         this.vendingMachine =venDingMachine;

@@ -8,9 +8,11 @@ public abstract class Dinosaur extends Actor {
     private boolean isPregnant = false;
     /**
      * Constructor.
+     * functions that encapsulate all the methods governing the dinosaurus classes
      *  @param name        the name of the Actor
      * @param displayChar the character that will represent the Actor in the display
      * @param hitPoints   the Actor's starting hit points
+     * @author Ashwin Sarith
      */
 
     public Dinosaur(String name, char displayChar, int hitPoints, Gender gender, Species species) {

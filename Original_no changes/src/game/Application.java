@@ -29,7 +29,6 @@ public class Application {
 				".....###.###....................................................................",
 				"................................................................................",
 				"......................................+++.......................................",
-
 				".......................................++++.....................................",
 				"...................................+++++........................................",
 				".....................................++++++.....................................",
@@ -59,7 +58,6 @@ public class Application {
 				".....###.###....................................................................",
 				"................................................................................",
 				"......................................+++.......................................",
-
 				".......................................++++.....................................",
 				"...................................+++++........................................",
 				".....................................++++++.....................................",
@@ -83,10 +81,6 @@ public class Application {
 		world.addGameMap((secondMap));
 		GrassOnMap g2 = new GrassOnMap(secondMap);
 
-		//adding player in the map
-		Actor player2 = new Player("Player", '@', 100);
-		world.addPlayer(player2, secondMap.at(9, 4));
-
 		//the current map
 		GameMap gameMap = new GameMap(groundFactory, map );
 		world.addGameMap(gameMap);
@@ -109,13 +103,9 @@ public class Application {
 
 		//the way to the new map
 		MartianItem rocket = new MartianItem("Rocket", '^', false);
-		rocket.addAction(new MoveActorAction(secondMap.at(7, 2), "to new map!"));
+		rocket.addAction(new MoveActorAction(secondMap.at(1, 1), "to new map!"));
 		gameMap.at(1, 1).addItem(rocket);
 
-
-		Item spaceSuit = new MartianItem("space suit", '[', true);
-		spaceSuit.addCapability(DemoCapabilities.SPACETRAVELLER);
-		gameMap.at(0, 1).addItem(spaceSuit);
 
 
 		// Place a pair of stegosaurs in the middle of the map
